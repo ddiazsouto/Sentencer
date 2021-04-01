@@ -2,6 +2,8 @@
 Sentencer is an ice breaker
 
 ## --Requirements
+flask
+
 
 
 ## --Test Analysis
