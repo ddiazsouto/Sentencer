@@ -30,6 +30,10 @@ The readme must be exhaustive, the main structure will be written.
 
 
 
+I run into issues trying to put Jenkins in a container, it was solver by installing it in the machine
+
+
+
 
 
 | Description |Evaluation| Likelihood  | Impact Level | Responsability |  Response  |  Control Measures  
