@@ -5,7 +5,7 @@ pipeline {
         stage('Stage 1: Build/search'){
             steps{
                 sh "cd Service1"
-                sh "docker build -t Service1 ."
+                sh "docker build -t service1 ."
                 sh "cd .."
             }
         }
