@@ -3,7 +3,7 @@ Sentencer is an ice breaker
 
 ## --Requirements
 flask
-
+requests
 
 
 ## --Test Analysis
