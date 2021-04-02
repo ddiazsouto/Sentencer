@@ -10,7 +10,7 @@ pipeline {
 
         stage('Stage 2: Test/show'){
             steps{
-                sh "sudo ls"
+                sh "docker ps"
             }
         }
 
