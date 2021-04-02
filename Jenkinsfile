@@ -4,19 +4,25 @@ pipeline {
 
         stage('Stage 1: Build/search'){
             steps{
-                sh "whoami"
+                sh "docker build -t service1 ./Service1"
+                sh "docker build -t service2 ./Service2"
+                sh "docker build -t service3 ./Service3"
+                sh "docker build -t service4 ./Service4"
             }
         }
 
         stage('Stage 2: Test/show'){
             steps{
-                sh "docker ps"
+                sh "docker ps && docker images"
             }
         }
 
         stage('Stage 3: Deploy/do'){
             steps{
-                sh "pwd && ls"
+                sh "docker run -d -p 5500:5500 --name ser1 service1 "
+                sh "docker run -d -p 5000:5000 --name ser2 service2"
+                sh "docker run -d -p 5005:5005 --name ser3 service3"
+                sh "docker ps"
             }
         }
     }
