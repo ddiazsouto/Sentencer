@@ -16,7 +16,7 @@ pipeline {
 
         stage('Stage 3: Deploy/do'){
             steps{
-                sh "pwd "
+                sh "pwd && ls"
             }
         }
     }
