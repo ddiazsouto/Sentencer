@@ -42,4 +42,5 @@ I run into issues trying to put Jenkins in a container, it was solver by install
 | :---        | :----:   |  :----:     |  :----:      |  :----:        |  :----:    |---:
 | The project is missing basic functionality on the day of the project | I had issues with connecting containers, machines or deploying| Medium  | Critical | Mine |    |  Work on the basic foundation of the app early on and build on top 
 | The connection between elements of the app falls down | the configuration that previously worked is no longer holding the app together | Medium/Low  | High | VM/Docker images/Jenkins pipelina |  Use a redundant Microservices aplication allocated for this purpose  |  Create a Redundant application as a back up
+|The Microserviced app is not finished on time|	Issues when deploying at the end| Moderate |	Very High | me/project manager	| Show the finished bits |	Have a working pipeline and infrastructure early on so we can test as we deploy (CI)
 |Description|	Evaluation| Very low |	High | GCP/me	| Response |	Control Measures
