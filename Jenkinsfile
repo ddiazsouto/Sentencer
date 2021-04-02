@@ -7,6 +7,7 @@ pipeline {
                 sh "docker build -t service1 ./Service1"
                 sh "docker build -t service2 ./Service2"
                 sh "docker build -t service3 ./Service3"
+                sh "docker build -t service4 ./Service4"
             }
         }
 
