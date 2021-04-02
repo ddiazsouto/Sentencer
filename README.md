@@ -30,10 +30,11 @@ The readme must be exhaustive, the main structure will be written.
 This needs to be done
 -Architecture
 
-
+## Issues
 
 I run into issues trying to put Jenkins in a container, it was solver by installing it in the machine
 
+The pipeline was given preference over the app, to align with Devops practices and improve CI
 
 
 
