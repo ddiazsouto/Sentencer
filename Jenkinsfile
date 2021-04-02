@@ -4,7 +4,9 @@ pipeline {
 
         stage('Stage 1: Build/search'){
             steps{
-                sh "whoami"
+                sh "cd Service1"
+                sh "docker build -t Service1 ."
+                sh "cd .."
             }
         }
 
@@ -16,7 +18,7 @@ pipeline {
 
         stage('Stage 3: Deploy/do'){
             steps{
-                sh "pwd && ls"
+                sh "docker run -d -p 5500:5500 --name ser1 service1 "
             }
         }
     }
