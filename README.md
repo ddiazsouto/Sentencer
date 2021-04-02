@@ -26,6 +26,8 @@ The readme must be exhaustive, the main structure will be written.
 -Test analysis
 -Technologies used
 -Database
+
+This needs to be done
 -Architecture
 
 
