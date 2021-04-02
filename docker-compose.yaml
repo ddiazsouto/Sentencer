@@ -1,2 +1,21 @@
 version: "3.8"
 services:
+    database:
+        image: mysql:5.7
+        ports:
+        - target: 3306
+          published: 3306
+    frontend:
+        build: ./Service1
+        ports:
+        - target: 5500
+          published: 5500        
+          protocol: tcp
+    depends_on:
+        - "database"
+    Logicker:
+        build: ./service4
+        ports:
+            - target: 5500
+            published: 5500        
+            protocol: tcp
