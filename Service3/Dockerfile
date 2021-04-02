@@ -6,6 +6,6 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-EXPOSE 5000
+EXPOSE 5005
 
 ENTRYPOINT ["python", "app.py"]
