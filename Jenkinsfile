@@ -4,7 +4,7 @@ pipeline {
 
         stage('Stage 1: Build/search'){
             steps{
-                sh "whoami && ls"
+                sh "whoami"
             }
         }
 
