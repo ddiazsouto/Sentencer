@@ -4,7 +4,7 @@ pipeline {
 
         stage('Stage 1: Build/search'){
             steps{
-                sh "pwd"
+                sh "whoami"
             }
         }
 
@@ -16,7 +16,7 @@ pipeline {
 
         stage('Stage 3: Deploy/do'){
             steps{
-                sh "echo 'Daniel' "
+                sh "pwd "
             }
         }
     }
