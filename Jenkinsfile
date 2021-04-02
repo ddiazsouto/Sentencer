@@ -21,6 +21,7 @@ pipeline {
             steps{
                 sh "docker run -d -p 5500:5500 --name ser1 service1 "
                 sh "docker run -d -p 5000:5000 --name ser2 service2"
+                sh "docker run -d -p 5005:5005 --name ser3 service3"
                 sh "docker ps"
             }
         }
