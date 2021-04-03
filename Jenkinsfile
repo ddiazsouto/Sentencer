@@ -5,7 +5,10 @@ pipeline {
         stage('Stage 0: Clean/Set-up'){
             steps{
 
-                sh "docker rm -f ${docker ps -aq}"
+                sh "docker rm -f ser1"
+                sh "docker rm -f ser2"
+                sh "docker rm -f ser3"
+                sh "docker rm -f ser4"
 
             }
         }
