@@ -5,7 +5,7 @@ pipeline {
         stage('Stage 0: Clean/Set-up'){
             steps{
 
-                sh "docker rm -f $(docker ps -aq)"
+                sh "docker rm -f ${docker ps -aq}"
 
             }
         }
