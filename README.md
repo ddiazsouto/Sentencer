@@ -37,6 +37,8 @@ I run into issues trying to put Jenkins in a container, it was solver by install
 The pipeline was given preference over the app, to align with Devops practices and improve CI
 
 
+Second step was to build the app, I can't seem to be able to use json requests
+
 
 
 | Description |Evaluation| Likelihood  | Impact Level | Responsability |  Response  |  Control Measures  
