@@ -2,6 +2,14 @@ pipeline {
     agent any
     stages{
 
+        stage('Stage 0: Clean/Set-up'){
+            steps{
+
+                sh "docker rm -f $(docker ps -aq)"
+
+            }
+        }
+
         stage('Stage 1: Build/search'){
             steps{
                 sh "docker build -t service1 ./Service1"
