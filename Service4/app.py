@@ -10,8 +10,8 @@ def middleend():
 
     output = dict()
 
-    response = requests.get('http://0.0.0.0:5000/')  #  http://35.223.236.160:5000/
-    sentence = requests.get('http://0.0.0.0:5005/') # http://35.223.236.160:5005/
+    response = requests.get('http://35.223.236.160:5000/')  #  http://35.223.236.160:5000/
+    sentence = requests.get('http://35.223.236.160:5005/') # http://35.223.236.160:5005/
 
     output[response] = sentence
 
