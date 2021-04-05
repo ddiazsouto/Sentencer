@@ -15,7 +15,7 @@ def middleend():
         data_received = request.data.decode('utf-8')      
         return Response(data_received)
 
-    return f"<body style='background-color:{color};'"
+    return 'Daniel Diaz Souto'
 
 if __name__ == '__main__':
     app.run(port=5050, host='0.0.0.0', debug=True)
