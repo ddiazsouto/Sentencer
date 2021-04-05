@@ -14,6 +14,7 @@ pipeline {
             steps{
 
                 sh "docker-compose build"
+                sh "docker-compose up -d"
 
             }
         }
@@ -24,12 +25,12 @@ pipeline {
             }
         }
 
-        stage('Stage 3: Deploy'){
-            steps{
+        // stage('Stage 3: Deploy'){
+        //     steps{
 
-                sh "docker-compose up -d"
+                
 
-            }
-        }
+        //     }
+        // }
     }
 }
