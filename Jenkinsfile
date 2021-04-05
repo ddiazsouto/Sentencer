@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages{
 
-        stage('Stage 0: Clean/Set-up'){
+        stage('Stage 0: Set-up'){
             steps{
 
                 sh "echo Here-we-go"
@@ -10,7 +10,7 @@ pipeline {
             }
         }
 
-        stage('Stage 1: Build/search'){
+        stage('Stage 1: Build'){
             steps{
 
                 sh "docker-compose build"
@@ -18,13 +18,13 @@ pipeline {
             }
         }
 
-        stage('Stage 2: Test/show'){
+        stage('Stage 2: Test'){
             steps{
                 sh "docker ps && docker images"
             }
         }
 
-        stage('Stage 3: Deploy/do'){
+        stage('Stage 3: Deploy'){
             steps{
 
                 sh "docker-compose up -d"
