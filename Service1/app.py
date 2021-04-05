@@ -10,7 +10,7 @@ def frontend():
     template='main.html'
     color='blue'
 
-    parsed = requests.get('http://10.128.0.54:5050/')
+    parsed = requests.get('http://10.128.0.54:5050/').text
 
     if request.method == 'POST':
 
