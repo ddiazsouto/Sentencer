@@ -9,6 +9,7 @@ def frontend():
     template='main.html'
     color='blue'
 
+    #parsed = requests.get('http://35.223.236.160:5050/')
 
     if request.method == 'POST':
 
