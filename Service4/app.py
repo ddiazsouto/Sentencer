@@ -17,7 +17,7 @@ def middleend():
     #     return Response(data_received)
 
     return f'Hey, I am talking with Service 2, and its saying: {response.text}\
-        \n\n\n\nI am also talking with Service3 and it is saying: {sentence.text}'
+        <br><br> am also talking with Service3 and it is saying: {sentence.text}'
 
 if __name__ == '__main__':
     app.run(port=5050, host='0.0.0.0', debug=True)
