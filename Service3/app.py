@@ -2,12 +2,11 @@ from flask import Flask
 from random import randint
 app = Flask(__name__)
 
-@app.route('/number', methods=['GET'])
+@app.route('/', methods=['GET'])
 def randomization():
     sentences = ['How great', 'Could be better', 'Holly Cow!!', 'Awesome', 'Like a fish in the water', 'Who cares?']
 
-    select = randint(1, 6)
-
+    select = randint(0, 6)
 
     return str(sentences[select])
 
