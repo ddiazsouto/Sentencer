@@ -5,20 +5,16 @@ pipeline {
         stage('Stage 0: Clean/Set-up'){
             steps{
 
-                sh "docker rm -f ser1"
-                sh "docker rm -f ser2"
-                sh "docker rm -f ser3"
-                sh "docker rm -f ser4"
+                sh "echo Here-we-go"
 
             }
         }
 
         stage('Stage 1: Build/search'){
             steps{
-                sh "docker build -t service1 ./Service1"
-                sh "docker build -t service2 ./Service2"
-                sh "docker build -t service3 ./Service3"
-                sh "docker build -t service4 ./Service4"
+
+                sh "docker-compose build"
+
             }
         }
 
@@ -30,11 +26,9 @@ pipeline {
 
         stage('Stage 3: Deploy/do'){
             steps{
-                sh "docker run -d -p 5500:5500 --name ser1 --network mynet service1"
-                sh "docker run -d -p 5000:5000 --name ser2 --network mynet service2"
-                sh "docker run -d -p 5005:5005 --name ser3 --network mynet service3"
-                sh "docker run -d -p 5050:5050 --name ser4 --network mynet service4"
-                sh "docker ps"
+
+                sh "docker-compose up -d"
+
             }
         }
     }
