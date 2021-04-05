@@ -36,7 +36,8 @@ class TestViews(TestBase):  # This test confirms that the page loads
 #     def test_one(self):
 #     # We will mock a response of 1 and test that we get football returned.
 #         with patch('requests.get') as g:
-#             g.return_value.text = "Dan"
 
-#             response = self.client.get(url_for('middleend'))
-#             self.assertIn(b'dan.html', response.data)
+#             response = self.client.get(url_for('randomization'))
+#             g.return_value.text = "Dan"
+            
+#             self.assertIn(b'Dan', response.data)
