@@ -6,11 +6,12 @@ some={'dan':'Cool', 'Other': 'not so cool'}
 
 
 @app.route('/', methods=['GET', 'POST'])
-def frontend():
+def main():
     template='main.html'
     color='blue'
 
     parsed = requests.get('http://10.128.0.54:5050/').text
+    
 
     if request.method == 'POST':
 

@@ -26,7 +26,7 @@ class TestBase(TestCase):   # main function to create the app environment
 class TestViews(TestBase):  # This test confirms that the page loads
 
     def test_home_get(self):
-        response = self.client.get(url_for('frontend'))
+        response = self.client.get(url_for('main'))
         self.assertEqual(response.status_code, 200)
 
 
