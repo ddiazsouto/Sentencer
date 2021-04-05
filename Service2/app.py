@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 from random import randint
 app = Flask(__name__)
 
@@ -10,7 +10,7 @@ def randomizer():
     if request.method == 'GET':
 
         random = randint(1, 15)
-        
+
     return f'{random}'
 
 
