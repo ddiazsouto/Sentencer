@@ -1,0 +1,7 @@
+sudo apt install python-pytest
+mock
+flask 
+flask-testing 
+pytest 
+pytest-cov 
+requests
