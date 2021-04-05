@@ -6,6 +6,7 @@ flask
 requests
 
 
+
 ## --Test Analysis
 
 
@@ -38,6 +39,8 @@ The pipeline was given preference over the app, to align with Devops practices a
 
 
 Second step was to build the app, I can't seem to be able to use json requests
+
+Worked out the tests after a while
 
 
 
