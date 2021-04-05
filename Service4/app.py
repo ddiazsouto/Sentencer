@@ -13,7 +13,7 @@ def middleend():
     response = requests.get('http://35.223.236.160:5000/')  #  http://35.223.236.160:5000/
     sentence = requests.get('http://35.223.236.160:5005/') # http://35.223.236.160:5005/
 
-    output[response] = sentence
+    output['Dan'] = 'Whatever'
 
 
 
@@ -22,7 +22,7 @@ def middleend():
     #     data_received = request.data.decode('utf-8')      
     #     return Response(data_received)
 
-    return f'{output}'
+    return f'{str(output)}, one Service says {response}, and the other says {sentence}'
 
 if __name__ == '__main__':
     app.run(port=5050, host='0.0.0.0', debug=True)
