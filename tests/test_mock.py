@@ -3,7 +3,7 @@ from unittest.mock import patch
 from flask import url_for
 from flask_testing import TestCase
 
-from Service1 import app
+from Service4 import app
 
 
 
@@ -25,5 +25,5 @@ class TestResponse(TestBase):
         with patch('requests.get') as g:
             g.return_value.text = "Dan"
 
-            # response = self.client.get(url_for('frontend'))
-            self.assertIn(b'Football', response.data)
+            response = self.client.get(url_for('frontend'))
+            self.assertIn(b'dan.html', response.data)
