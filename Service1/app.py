@@ -5,7 +5,7 @@ some={'dan':'Cool', 'Other': 'not so cool'}
 
 
 @app.route('/', methods=['GET', 'POST'])
-def number():
+def frontend():
     template='main.html'
     color='blue'
 
