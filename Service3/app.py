@@ -4,7 +4,8 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def randomization():
-    sentences = ['It was the craziest thing that my eyes have seen', 'How great', 'Could be better', 'Holly Cow!!', 'Awesome', 'Like a fish in the water', 'Who cares?']
+    sentences = ['It was the craziest thing that my eyes have seen', 'How great', 'Could be better', 'Holly Cow!!', \
+    'Awesome', 'Like a fish in the water', 'Who cares?', 'Yeeah baby!!', 'Not bad at all', 'Fantastic!', 'Nice!']
 
     select = randint(0, 6)
 
