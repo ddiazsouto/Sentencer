@@ -39,4 +39,4 @@ class TestResponse(TestBase):
             g.return_value.text = "Dan"
 
             response = self.client.get(url_for('middleend'))
-            self.assertIn(b'dan.html', response.data)
+            self.assertIn(b'Dan', response.data)
