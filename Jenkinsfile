@@ -2,10 +2,10 @@ pipeline {
     agent any
     stages{
 
-        stage('Stage 0: Set-up'){
+        stage('Stage 0: Test'){
             steps{
 
-                sh "echo Here-we-go"
+                sh "pytest"
 
             }
         }
@@ -15,11 +15,12 @@ pipeline {
 
                 sh "docker-compose build"
                 sh "docker-compose up -d"
+                // docker-compose push   <<-need to look into it
 
             }
         }
 
-        stage('Stage 2: Test'){
+        stage('Stage 2: Check'){
             steps{
                 sh "docker ps && docker images"
             }

@@ -1,0 +1,9 @@
+all:
+  hosts:
+    brains:
+      machine-main:
+    managers:      //  Undefined
+      leader-1:
+    workers:       // Yet undefined
+      worker1:        
+        
