@@ -2,13 +2,13 @@ pipeline {
     agent any
     stages{
 
-        stage('Stage 0: Test'){
-            steps{
+        // stage('Stage 0: Test'){
+        //     steps{
 
-                //sh "pytest"
+        //         //sh "pytest"
 
-            }
-        }
+        //     }
+        // }
 
         stage('Stage 1: Build'){
             steps{
