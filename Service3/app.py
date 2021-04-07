@@ -1,5 +1,5 @@
 from flask import Flask
-from Service4.elementae import azar
+from elementae import azar
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
