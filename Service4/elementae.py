@@ -12,7 +12,7 @@ def azar(rang, numbers):
     for i in range(numbers):
         buffer.append(randint(lowl, highl))
         
-    if len(dicing)==1:
+    if len(buffer)==1:
         buffer=buffer[0]
 
     return buffer
