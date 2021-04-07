@@ -1,11 +1,21 @@
 from random import randint
 
 
-def azar(range):
 
-    lowl  = range[0]
-    highl = range[1]
 
-    dicing = randint(lowl, highl)
+def azar(rang, numbers):
 
-    return dicing
+    buffer = []
+    lowl  = rang[0]
+    highl = rang[1]
+
+    for i in range(numbers):
+        buffer.append(randint(lowl, highl))
+        
+    if len(dicing)==1:
+        buffer=buffer[0]
+
+    return buffer
+
+
+
