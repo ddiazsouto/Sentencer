@@ -1,5 +1,6 @@
 from flask import Flask
 from random import randint
+from Service4.elementae import azar
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
