@@ -7,7 +7,7 @@ pipeline {
 
                 sh "chmod +x testing.sh"
 
-                sh ". testing.sh"
+                sh ". /home/jenkins/.jenkins/workspace/Sentencer\ pipe/testing.sh"
 
             }
         }
