@@ -53,6 +53,30 @@ class BeLogic():
                     
         return color
 
+    
+    def talk(self):
+                
+        def togetherness(jason, exp):
+            
+            outcome = ''
+            
+            if jason['question'] == True:
+                
+                state = jason['phrase']                
+                outcome = state['aux'] +' '+ state['pronoun'] +' '+ state['verb1'] +' '+ state['verb2']
+                
+            else:
+                ask = jason['phrase']
+                outcome = ask['pronoun'] +' ' + ask['verb1'] +' ' + ask['verb2']
+                
+            return outcome
+                              
+        
+        expression = self.sentence['expression']        
+        myson = self.phrase
+        
+        return togetherness(myson, expression)
+
 
 
 
