@@ -5,4 +5,4 @@ source venv/bin/activate
 pip3 install -r requiretest.txt
 
 
-python3 -m pytest --cov --cov-report=missing-term
+python3 -m pytest --cov=. --cov-report=missing-term
