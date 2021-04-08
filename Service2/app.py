@@ -7,17 +7,17 @@ app = Flask(__name__)
 def randomizer():
 
     output = dict()
-
-    randlist = azar([0, 7], 4)    
+ 
+    check = phraser(azar([0, 7], 4), question)  
     dark = binary()
     question = binary()
 
     output['dark'] = dark
-    output['list'] = randlist
+    output['question'] = question
+    output['phrase'] = check
+    
 
-    check = phraser(randlist, question)
-
-    return jsonify(check)
+    return jsonify(output)
 
 
 
