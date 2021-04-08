@@ -6,14 +6,15 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def randomizer():
 
-    random = randint(1, 100)
-    dan = binary()
+    output = dict()
 
-    if request.method == 'GET':
+    randlist = azar([1, 10], 4)    
+    dark = binary()
 
-        random = randint(1, 15)
+    output['dark'] = dark
+    output['list'] = randlist
 
-    return f'{random}'
+    return output
 
 
 
