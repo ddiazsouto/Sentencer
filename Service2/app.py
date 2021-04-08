@@ -7,12 +7,11 @@ app = Flask(__name__)
 def randomizer():
 
     output = dict()
- 
-    check = phraser(azar([0, 7], 4), question)  
-    dark = binary()
+     
     question = binary()
+    check = phraser(azar([0, 7], 4), question)  
 
-    output['dark'] = dark
+    output['dark'] = binary()
     output['question'] = question
     output['phrase'] = check
     
