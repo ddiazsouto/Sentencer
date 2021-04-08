@@ -32,7 +32,8 @@ def expresser(mood):
         output['mood'] = 1
         output['expression'] = positive[azar([0, 10], 1)]
     elif mood == 0:
-        output[0] = negative[azar([0, 10], 1)]         
+        output['mood'] = 0
+        output['expression'] = negative[azar([0, 10], 1)]         
     
     return output
 
