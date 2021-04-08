@@ -5,7 +5,7 @@ pipeline {
         stage('Stage 0: Test'){
             steps{
 
-                sh "ls"
+                sh "./testing.sh"
 
             }
         }
