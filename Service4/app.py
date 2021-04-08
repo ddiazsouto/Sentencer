@@ -9,9 +9,9 @@ def middleend():
     output = dict()
 
     response = requests.get('http://10.128.0.54:5000/')  #  Service 2
-    sentence = requests.get('http://10.128.0.54:5005/')  #  Service 3
+    sentence = requests.get('http://10.128.0.54:5005/').json()  #  Service 3
 
-    output[response.text] = sentence.text
+    output[response.text] = sentence
 
 
 
