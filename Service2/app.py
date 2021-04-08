@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from random import randint
-from frasium import binary, azar
+from frasium import binary, azar, phraser
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
@@ -8,13 +8,16 @@ def randomizer():
 
     output = dict()
 
-    randlist = azar([1, 10], 4)    
+    randlist = azar([0, 7], 4)    
     dark = binary()
+    question = binary()
 
     output['dark'] = dark
     output['list'] = randlist
 
-    return jsonify(output)
+    check = phraser(randlist, question)
+
+    return jsonify(check)
 
 
 
