@@ -5,6 +5,8 @@ pipeline {
         stage('Stage 0: Test'){
             steps{
 
+                sh "chmod +x testing.sh"
+
                 sh "sudo . testing.sh"
 
             }
