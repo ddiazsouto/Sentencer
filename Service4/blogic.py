@@ -63,11 +63,11 @@ class BeLogic():
             if jason['question'] == True:
                 
                 state = jason['phrase']                
-                outcome = state['aux'] +' '+ state['pronoun'] +' '+ state['verb1'] +' '+ state['verb2']
+                outcome = exp +'. '+ state['aux'] +' '+ state['pronoun'] +' '+ state['verb1'] +' '+ state['verb2']
                 
             else:
                 ask = jason['phrase']
-                outcome = ask['pronoun'] +' ' + ask['verb1'] +' ' + ask['verb2']
+                outcome = ask['pronoun'] +' ' + ask['verb1'] +' ' + ask['verb2'] +'?' +exp
                 
             return outcome
                               
