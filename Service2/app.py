@@ -1,6 +1,6 @@
 from flask import Flask, request
 from random import randint
-from frasium import binary
+from frasium import binary, azar
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
