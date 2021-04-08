@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, Response, jsonify, url_for
 import requests
-from Service4.blogic import BeLogic
+from blogic import BeLogic
 app = Flask(__name__)
 
 
