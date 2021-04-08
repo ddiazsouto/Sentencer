@@ -18,4 +18,8 @@ def azar(rang, numbers):
     return buffer
 
 
+def BeLogic(phrase, sentence):
+
+    
+
 

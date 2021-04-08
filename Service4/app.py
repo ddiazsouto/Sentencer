@@ -11,8 +11,8 @@ def middleend():
     phrase = requests.get('http://10.128.0.54:5000/').json()  #  Service 2
     sentence = requests.get('http://10.128.0.54:5005/').json()  #  Service 3
 
-    output['one'] = phrase
-    output['two'] = sentence
+    output['phrase'] = phrase
+    output['sentence'] = sentence
 
 
 
