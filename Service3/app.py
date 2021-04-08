@@ -1,5 +1,5 @@
 from flask import Flask
-from elementae.rand import azar
+from elementae import azar
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
