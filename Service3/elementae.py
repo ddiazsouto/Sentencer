@@ -26,8 +26,13 @@ def expresser(mood):
     negative = ['Just horrible', 'Do not even try man...', 'Could be better', 'Holly Cow!!', \
     'Horrendous!!', 'Please, that is enough', 'Who cares?', 'Bad, bad, bad...', 'I better leave now.', 'That is just so baaaad!', 'Can not stand it anymore']
 
+    output = dict()
+
     if mood == 1:
-        return positive[azar([0, 10], 1)]
+        output[1] = positive[azar([0, 10], 1)]
     elif mood ==0:
-        return negative[azar([0, 10], 1)]         
+        output[0] = negative[azar([0, 10], 1)]         
+    
+    return output
+
 
