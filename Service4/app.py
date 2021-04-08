@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, Response, jsonify, url_for
 import requests
+from Service4.blogic import BeLogic
 app = Flask(__name__)
 
 
@@ -11,8 +12,10 @@ def middleend():
     phrase = requests.get('http://10.128.0.54:5000/').json()  #  Service 2
     sentence = requests.get('http://10.128.0.54:5005/').json()  #  Service 3
 
-    output['phrase'] = phrase
-    output['sentence'] = sentence
+    digest = BeLogic(phrase, sentence)
+
+    output['color'] = digest.color()
+    #output['sentence'] = sentence
 
 
 

@@ -18,8 +18,41 @@ def azar(rang, numbers):
     return buffer
 
 
-def BeLogic(phrase, sentence):
+class BeLogic():
+    def __init__(self, phrase, sentence):
+        self.phrase = phrase
+        self.sentence = sentence
 
-    
+
+    def color(self):
+        
+        def tones(mood):
+        
+            if mood == 1 or mood == 0:
+                happy = ['XYXY00', 'XYX500', 'XY00XY', 'XY0000']
+                return happy[azar([0, 3], 1)]
+            else:
+                sad = ['0000XY', '00XY00', '00XYXY', '0XYXY0', 'XYXYXY']
+                return sad[azar([0, 4], 1)]
+            
+        def depth(boolean):        
+            hexa = '0123456789abcdef'
+            
+            if boolean == False:
+                pair = azar([0, 7], 2)
+                return hexa[pair[0]] + hexa[pair[1]]
+            else:
+                pair = azar([8, 15], 2)
+                return hexa[pair[0]] + hexa[pair[1]]
+        
+        
+        color = tones(self.sentence['mood'])           
+        darkness = depth(self.phrase['dark'])
+        
+        color = color.replace('XY', darkness)
+                    
+        return color
+
+
 
 
