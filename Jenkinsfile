@@ -7,7 +7,7 @@ pipeline {
 
                 sh "chmod +x testing.sh"
 
-                sh "sudo . testing.sh"
+                sh ". testing.sh"
 
             }
         }
