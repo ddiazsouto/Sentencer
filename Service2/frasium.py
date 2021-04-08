@@ -44,12 +44,9 @@ def phraser(list, question):
     output['verb2'] = verb2[list[2]]
     output['preposition'] = preposition[list[3]]
 
-    
-
-    if 2 == 1:
-        output['mood'] = 1
-        output['expression'] = positive[azar([0, 10], 1)]
-    elif 1 == 0:
-        output[0] = negative[azar([0, 10], 1)]         
+    if question == True and output['pronoun'] in ['He', 'She', 'It']:
+        output['aux'] = 'Does'
+    elif question == True and output['pronoun'] not in ['He', 'She', 'It']:
+        output['aux'] = 'Do'       
     
     return {'phrase':output}    
