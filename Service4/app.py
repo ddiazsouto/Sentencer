@@ -15,6 +15,7 @@ def middleend():
     digest = BeLogic(phrase, sentence)
 
     output['color'] = digest.color()
+    output['sentence'] = digest.talk()
     #output['sentence'] = sentence
 
 
