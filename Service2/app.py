@@ -1,11 +1,13 @@
 from flask import Flask, request
 from random import randint
+from frasium import binary
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def randomizer():
 
     random = randint(1, 100)
+    dan = binary()
 
     if request.method == 'GET':
 
