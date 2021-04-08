@@ -2,15 +2,14 @@ pipeline {
     agent any
     stages{
 
-        // stage('Stage 0: Test'){
-        //     steps{
+        stage('Stage 0: Test'){
+            steps{
 
-        //         sh "chmod +x testing.sh"
+               
+                sh "bash testing.sh"
 
-        //         sh ". /home/jenkins/.jenkins/workspace/Sentencer\ pipe/testing.sh"
-
-        //     }
-        // }
+            }
+        }
 
         stage('Stage 1: Build'){
             steps{
