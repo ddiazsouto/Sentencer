@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from random import randint
 from frasium import binary, azar
 app = Flask(__name__)
@@ -14,7 +14,7 @@ def randomizer():
     output['dark'] = dark
     output['list'] = randlist
 
-    return output
+    return jsonify(output)
 
 
 
