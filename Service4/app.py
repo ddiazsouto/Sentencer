@@ -14,9 +14,9 @@ def middleend():
 
     digest = BeLogic(phrase, sentence)
 
-    output['color'] = digest.color()
-    output['sentence'] = digest.talk()
-    #output['sentence'] = sentence
+    output["color"] = digest.color()
+    output["sentence"] = digest.talk()
+    
 
 
     # if request.method == 'POST':
@@ -24,7 +24,7 @@ def middleend():
     #     data_received = request.data.decode('utf-8')      
     #     return Response(data_received)
 
-    return f'{output}'
+    return jsonify(output)
 
 if __name__ == '__main__':
     app.run(port=5050, host='0.0.0.0', debug=True)

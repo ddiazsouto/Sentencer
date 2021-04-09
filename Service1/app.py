@@ -10,7 +10,7 @@ def main():
     template='main.html'
     
 
-    got = requests.get('http://10.128.0.54:5050/').json
+    got = requests.get('http://10.128.0.54:5050/').text
     
 
     if request.method == 'POST':
@@ -18,11 +18,11 @@ def main():
         data_received = request.data.decode('utf-8')      
         return Response(data_received)
 
-    color = got['color']
-    var = got['sentence']
+    color = '00ff00' # got['color']
+    var = 'dan' #got['sentence']
     
 
-    return render_template(template, title='Frontend', color=color, var=parsed)
+    return render_template(template, title='Frontend', color=color, var=var)
 
 if __name__ == '__main__':
     app.run(port=5500, host='0.0.0.0', debug=True)
