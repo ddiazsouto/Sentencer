@@ -1,7 +1,7 @@
 ---
-# handlers file for getnginx
-# - name: 'reload nginx'
-#   service:
-#     name: nginx
-#     state: reloaded
-#     become: true
+handlers file for getnginx
+- name: 'reload nginx'
+  service:
+    name: nginx
+    state: reloaded
+    become: true
