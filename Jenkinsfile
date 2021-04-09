@@ -27,12 +27,12 @@ pipeline {
               
             }                                            
         }
-        // stage('Stage 3: Config'){
-        //     steps{                          
+        stage('Stage 3: Config'){
+            steps{                          
 
-        //         sh "/home/jenkins/.local/bin/ansible-playbook -i inventory.yaml playbook.yaml -vvv"
-        //     }
-        // }
+                sh "/home/jenkins/.local/bin/ansible-playbook -i inventory.yaml playbook.yaml -vvv"
+            }
+        }
 
 
         stage('Stage 4: Deploy'){                        //     And here we pull from Dockerhub instead of using local images
