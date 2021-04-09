@@ -1,5 +1,5 @@
 ---
-handlers file for getnginx
+# handlers file for getnginx
 - name: 'reload nginx'
   service:
     name: nginx
