@@ -40,7 +40,12 @@ def phraser(list, question):
     'many', 'some']
 
     output['pronoun'] = pronoun[list[0]]
-    output['verb1'] = verb1[list[1]]
+
+    if output['pronoun'] in ['He', 'She', 'It']:
+        output['verb1'] = verb1[list[1]] + 's'          # Here we make a condition for when the pronoun is third person
+    else:                                               #   so we add the 's' in the end of the verb
+        output['verb1'] = verb1[list[1]]
+
     output['verb2'] = verb2[list[2]]
     output['preposition'] = preposition[list[3]]
 
