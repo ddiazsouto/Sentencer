@@ -10,7 +10,7 @@ def main():
     template='main.html'
     
 
-    got = requests.get('http://10.128.0.54:5050/').text
+    got = requests.get('http://10.128.0.54:5050/').json()
     
 
     if request.method == 'POST':
@@ -18,7 +18,7 @@ def main():
         data_received = request.data.decode('utf-8')      
         return Response(data_received)
 
-    color = '00ff00' # got['color']
+    color = got['color']
     var = 'dan' #got['sentence']
     
 
