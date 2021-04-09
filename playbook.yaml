@@ -1,0 +1,9 @@
+- hosts: employees
+  become: yes
+  roles:
+  - docker
+
+- hosts: nginx
+  become: no
+  roles:
+  - getnginx

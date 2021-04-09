@@ -6,6 +6,7 @@ bosses:
   hosts:
     master:
     leader1:
+    
 employees:
   hosts:
     worker:        

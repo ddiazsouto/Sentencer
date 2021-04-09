@@ -1,0 +1,20 @@
+---
+# tasks file for getnginx
+
+- name: 'Install NGINX using apt'
+  apt:
+    pkg:
+    - nginx
+    state: latest
+    update_cache: true
+
+- name: 'ensuring nginx is up'
+  service:
+    name: nginx
+    state: started
+
+- name: 'install the nginx.conf file on to the remote machine'
+  template:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
+  notify: 'reload nginx'

@@ -28,8 +28,9 @@ pipeline {
             }                                            
         }
         // stage('Stage 3: Config'){
-        //     steps{               
+        //     steps{                          
 
+        //         sh "ansible-playbook -i inventory.yaml playbook.yaml"
         //     }
         // }
 
