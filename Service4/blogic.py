@@ -29,7 +29,7 @@ class BeLogic():
         def tones(mood):
         
             if mood == 1 or mood == 0:
-                happy = ["XYXY00", "XYX500", "XY00XY", "XY0000"]
+                happy = ["XYXY00", "XY5500", "XY00XY", "XY0000"]
                 return happy[azar([0, 3], 1)]
             else:
                 sad = ["0000XY", "00XY00", "00XYXY", "0XYXY0", "XYXYXY"]
