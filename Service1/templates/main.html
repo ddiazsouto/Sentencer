@@ -1,9 +1,91 @@
 <html>
-    <body style='background: radial-gradient(#000000, #{{color}});''>
+
+    <head>
+
+        <style>
+
+            
+            .dropbtn {
+              background-color: #aaaaff;
+              color: white;
+              padding: 16px;
+              font-size: 16px;
+              min-width: 120px;
+              border: none;
+              cursor: pointer;
+            }
+            
+            
+            .dropdown {
+              position: relative;
+              display: inline-block;
+            }
+            
+            
+            .dropdown-content {
+              display: none;
+              position: absolute;
+              background-color: #aaaaff3f;
+              min-width: 160px;
+              border-radius: 7px;
+              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+              z-index: 1;
+            }
+            
+            
+            .dropdown-content a {
+              color: #000000;
+              padding: 12px 16px;
+              text-decoration: none;
+              border-radius: 3px;
+              display: block;
+            }
+            
+         
+            .dropdown-content a:hover {background-color: #3333ffb7}
+            
+          
+            .dropdown:hover .dropdown-content {
+              display: block;
+            }
+            
+          
+            .dropdown:hover .dropbtn {
+              background-color: #2222ff9c;
+            }
+
+
+
+            table{
+    background-color: lightblue; width: 20px; padding: 25px;    
+
+    position:fixed;
+    border-radius:7px;
+    width:1050px;
+    height:510px;
+    background:#eeeeeeaf;
+    left:150px;
+    top:100px;
+
+    }
+        </style>
+
+
+
+
+    </head>
+
+
+
+    <body style="background: radial-gradient(#000000, #{{color}}); font-family: garamond;"> 
+
+        <table>
        <center> <br><br><br> <h1>  Hey, I am running in a container</h1>  <br>{{msg}} </center>
        <br><br><p>
        And I am coming all the way from containers 2 and 3, through container 4 just to tell you this: <br>
        {{var}}
+
+    </table>
 
 
     </p>

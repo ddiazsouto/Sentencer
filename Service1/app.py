@@ -19,7 +19,7 @@ def main():
         return Response(data_received)
 
     color = gotit['color']
-    msg = goit['sentence']
+    msg = gotit['sentence']
     
 
     return render_template(template, title='Frontend', color=color, var=msg)
