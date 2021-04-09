@@ -28,12 +28,12 @@ pipeline {
             }                                            
         }
         // stage('Stage 3: Config'){
-        //     steps{
+        //     steps{               
 
-                
+        //     }
+        // }
 
-            }
-        }
+        
         stage('Stage 4: Deploy'){                        //     And here we pull from Dockerhub instead of using local images
             steps{
 
