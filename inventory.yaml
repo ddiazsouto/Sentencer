@@ -1,9 +1,18 @@
-all:
+nginx:
   hosts:
-    brains:
-      machine-main:
-    managers:      //  Undefined
-      leader-1:
-    workers:       // Yet undefined
-      worker1:        
-        
+    balancer:
+
+bosses:
+  hosts:
+    master:
+    leader1:
+employees:
+  hosts:
+    worker:        
+    
+      # hosts:
+      #   ec2-3-9-191-132.eu-west-2.compute.amazonaws.com:
+      #   ec2-35-178-160-92.eu-west-2.compute.amazonaws.com:
+      # vars:
+      #   ansible_user: ubuntu
+      #   ansible_ssh_private_key_file: "~/.ssh/ansible_id_rsa"
