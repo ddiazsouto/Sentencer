@@ -32,14 +32,14 @@ pipeline {
 
                 
 
-        //     }
-        // }
-        // stage('Stage 4: Deploy'){                        //     And here we pull from Dockerhub instead of using local images
-        //     steps{
+            }
+        }
+        stage('Stage 4: Deploy'){                        //     And here we pull from Dockerhub instead of using local images
+            steps{
 
-        //         sh "docker stack deploy --compose-file docker-compose.yaml Sentencer"
+                sh "docker stack deploy --compose-file docker-compose.yaml Sentencer"
                 
-        //     }
-        // }
+            }
+        }
     }
 }
