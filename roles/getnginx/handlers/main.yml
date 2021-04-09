@@ -3,5 +3,5 @@
 - name: 'reload nginx'
   service:
     name: nginx
-    state: reloaded
+    state: restarted
     become: true
