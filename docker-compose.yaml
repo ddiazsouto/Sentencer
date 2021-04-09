@@ -9,8 +9,8 @@ services:
     ser1:
         build: ./Service1
         image: ddiazsouto/ser1:latest
-        # deploy:
-        #   replicas: 10
+        deploy:
+          replicas: 10
         ports:
         - target: 5500
           published: 5500        
@@ -31,8 +31,8 @@ services:
     ser2:
         build: ./Service2
         image: ddiazsouto/ser2:latest
-        # deploy:
-        #   replicas: 5
+        deploy:
+          replicas: 5
         ports:
         - target: 5000
           published: 5000
