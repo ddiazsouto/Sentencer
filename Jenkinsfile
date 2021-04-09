@@ -24,15 +24,16 @@ pipeline {
                 sh "docker login -u 'ddiazsouto' -p 'Buddhassister22' docker.io"
                 sh "docker ps && docker images"         // Here we push to DockerHub or Nexus so in the Deployment phase we can pull from there
                 sh "docker-compose push "               // as it is best practice
-                                                        //         Then potentially delete images since container should be running
+                sh "docker rmi $(docker images -aq)"
+                sh "docker images"                                        //         Then potentially delete images since container should be running
             }                                            
         }
-        stage('Stage 3: Config'){
-            steps{                          
+        // stage('Stage 3: Config'){
+        //     steps{                          
 
-                sh "/home/jenkins/.local/bin/ansible-playbook -i inventory.yaml playbook.yaml -vvv"
-            }
-        }
+        //         sh "/home/jenkins/.local/bin/ansible-playbook -i inventory.yaml playbook.yaml -vvv"
+        //     }
+        // }
 
 
         stage('Stage 4: Deploy'){                        //     And here we pull from Dockerhub instead of using local images

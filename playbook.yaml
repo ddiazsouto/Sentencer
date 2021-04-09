@@ -3,7 +3,7 @@
   roles:
   - docker
 
-- hosts: nginx
-  become: yes
-  roles:
-  - getnginx
+# - hosts: nginx
+#   become: yes
+#   roles:
+#   - getnginx

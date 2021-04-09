@@ -8,10 +8,25 @@ requests
 
 
 ## --Test Analysis
+We started wit a very simple testing only checking that the pages load and thus we get a return statement with a status of 200.
+
+We need more testing in the GET and POST requests that are made
+
+We are missing more thorough testing mainly in the classes and functions that were created for the module
+
 
 
 ## --Tech Stack used
 
+MySQL
+Python
+Git
+Jenkins
+Ansible
+GCP
+Docker
+Docker Swarm
+NGINX
 
 ## --Database
 
