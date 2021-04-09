@@ -1,7 +1,7 @@
 nginx:
   hosts:
     balancer:
-      ansible_user: destruktor
+      ansible_user: jenkins
       # ansible_ssh_private_key_file: "~/.ssh/id_rsa"
       # ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
 
@@ -17,7 +17,12 @@ employees:
     worker:
       ansible_user: jenkins
       ansible_ssh_private_key_file: "~/.ssh/id_rsa"
-      ansible_ssh_common_args: '-o StrictHostKeyChecking=no'        
+      ansible_ssh_common_args: '-o StrictHostKeyChecking=no'     
+
+    worker:
+      ansible_user: jenkins
+      ansible_ssh_private_key_file: "~/.ssh/id_rsa"
+      ansible_ssh_common_args: '-o StrictHostKeyChecking=no'      
     
     # vars:
     #   ansible_user: jenkins
