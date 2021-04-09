@@ -11,7 +11,7 @@
 - name: 'ensuring nginx is up'
   service:
     name: nginx
-    state: started
+    state: reloaded
 
 - name: 'install the nginx.conf file on to the remote machine'
   template:
@@ -22,4 +22,4 @@
 - name: 'ensuring nginx is up'
   service:
     name: nginx
-    state: started
+    state: reloaded
