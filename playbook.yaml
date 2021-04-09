@@ -4,6 +4,6 @@
   - docker
 
 - hosts: nginx
-  become: no
+  become: yes
   roles:
   - getnginx
