@@ -19,7 +19,6 @@ def middleend():
     #output['sentence'] = sentence
 
 
-
     # if request.method == 'POST':
 
     #     data_received = request.data.decode('utf-8')      
