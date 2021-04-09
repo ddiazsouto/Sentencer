@@ -39,12 +39,8 @@ def phraser(list, question):
     preposition = ['a', 'before', 'with', 'the', 'in', 'a', \
     'many', 'some']
 
-    output['pronoun'] = pronoun[list[0]]
 
-    if output['pronoun'] in ['He', 'She', 'It']:
-        output['verb1'] = verb1[list[1]] + 's'          # Here we make a condition for when the pronoun is third person
-    else:                                               #   so we add the 's' in the end of the verb
-        output['verb1'] = verb1[list[1]]
+    output['pronoun'] = pronoun[list[0]]
 
     output['verb2'] = verb2[list[2]]
     output['preposition'] = preposition[list[3]]
@@ -56,5 +52,11 @@ def phraser(list, question):
         output['aux'] = 'Do'  
         if output['pronoun'] != 'I':
             output['pronoun'] = output['pronoun'].lower()
+    else:
+        if output['pronoun'] in ['He', 'She', 'It']:
+            output['verb1'] = verb1[list[1]] + 's'          # Here we make a condition for when the pronoun is third person
+        else:                                               #   so we add the 's' in the end of the verb
+            output['verb1'] = verb1[list[1]]
     
+
     return output  

@@ -24,7 +24,7 @@ def expresser(mood):
     'Awesome', 'Just like a fish in the water', 'Makes me so happy!', 'Yeeah baby!!', 'Not bad at all', 'Fantastic!', 'Nice!']
 
     negative = ['Just horrible', 'Do not even try man...', 'Could be better', 'Holly Cow!!', \
-    'Horrendous!!', 'Please, that is enough', 'Who cares?', 'Bad, bad, bad...', 'I better leave now.', 'That is just so baaaad!', 'Can not stand it anymore']
+    'Horrendous!!', 'Please, that is enough', 'Who cares?', 'Bad, bad, bad...', 'I better leave now..', 'That is just so baaaad!', 'Can not stand it anymore']
 
     output = dict()
 
