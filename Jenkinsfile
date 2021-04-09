@@ -27,12 +27,12 @@ pipeline {
                                                         //         Then potentially delete images since container should be running
             }                                            
         }
-        // stage('Stage 3: Config'){
-        //     steps{                          
+        stage('Stage 3: Config'){
+            steps{                          
 
-        //         sh "ansible-playbook -i inventory.yaml playbook.yaml"
-        //     }
-        // }
+                sh "ansible-playbook -i inventory.yaml playbook.yaml"
+            }
+        }
 
 
         stage('Stage 4: Deploy'){                        //     And here we pull from Dockerhub instead of using local images
