@@ -8,15 +8,19 @@ some={'dan':'Cool', 'Other': 'not so cool'}
 @app.route('/', methods=['GET', 'POST'])
 def main():
     template='main.html'
-    color='red'
+    
 
-    parsed = requests.get('http://10.128.0.54:5050/').text
+    got = requests.get('http://10.128.0.54:5050/').json
     
 
     if request.method == 'POST':
 
         data_received = request.data.decode('utf-8')      
         return Response(data_received)
+
+    color = got['color']
+    var = got['sentence']
+    
 
     return render_template(template, title='Frontend', color=color, var=parsed)
 
