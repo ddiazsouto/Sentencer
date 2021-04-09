@@ -47,7 +47,7 @@ def phraser(list, question):
     if question == True and output['pronoun'] in ['He', 'She', 'It']:
         output['aux'] = 'Does'
         output['pronoun'] = output['pronoun'].lower()
-    elif question == True and output['pronoun'] not in ['He', 'She', 'It']:
+    elif question == True and output['pronoun'] not in ['He', 'She', 'It', 'I']:
         output['aux'] = 'Do'  
         output['pronoun'] = output['pronoun'].lower()
     
