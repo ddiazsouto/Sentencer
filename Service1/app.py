@@ -9,9 +9,7 @@ from os import getenv
 def main():
     template='main.html'
 
-    # host = getenv("HOSTNAME")
-
-    logino = getenv('PASSWD')
+    # host = getenv("HOSTNAME")    
 
     # DanSQL().write("CREATE TABLE IF NOT EXISTS some(data int(10), more int(20));")
 
@@ -30,7 +28,7 @@ def main():
     msg = gotit['sentence']
     
 
-    return render_template(template, title='Frontend', color=color, var=msg, txt=logino)
+    return render_template(template, title='Frontend', color=color, var=msg)
 
 if __name__ == '__main__':
     app.run(port=5500, host='0.0.0.0', debug=True)

@@ -2,8 +2,8 @@ from os import getenv
 import pymysql
 
 
-logino = getenv('DATABASE_CREDENTIALS')
-login = '645202398'
+
+login = getenv('PASSWD')
 
 
 
