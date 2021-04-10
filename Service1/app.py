@@ -9,13 +9,13 @@ from os import getenv
 def injects(variable):
         if request.method == 'POST':
 
-        DanSQL().write("CREATE TABLE IF NOT EXISTS some(Date TIMESTAMP DEFAULT now(), Sentence VARCHAR(100), id INT NOT NULL AUTO_INCREMENT PRIMARY KEY);")
-        DanSQL().write(f"INSERT INTO some(Sentence) values('{variable}');")
+            DanSQL().write("CREATE TABLE IF NOT EXISTS some(Date TIMESTAMP DEFAULT now(), Sentence VARCHAR(100), id INT NOT NULL AUTO_INCREMENT PRIMARY KEY);")
+            DanSQL().write(f"INSERT INTO some(Sentence) values('{variable}');")
 
 
 
 @app.route('/', methods=['GET', 'POST'])
-def main(msg):
+def main():
 
     # host = getenv("HOSTNAME") 
    
