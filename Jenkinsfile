@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment{
-            SOME = 'AA'
+            SOME = credentials('DATABASE_LOGIN')
             
     }
 
