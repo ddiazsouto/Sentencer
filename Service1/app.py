@@ -11,7 +11,7 @@ def main():
 
     # host = getenv("HOSTNAME")
 
-    DanSQL().write("CREATE TABLE IF NOT EXISTS some(data int(10), more int(20));")
+    # DanSQL().write("CREATE TABLE IF NOT EXISTS some(data int(10), more int(20));")
     
 
     gotit = requests.get('http://10.128.0.54:5050/').json()

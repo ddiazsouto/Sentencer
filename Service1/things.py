@@ -1,4 +1,6 @@
 from os import getenv
+import pymysql
+
 
 login = getenv('DATABASE_CREDENTIALS')
 
