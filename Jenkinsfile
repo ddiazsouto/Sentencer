@@ -3,7 +3,7 @@ pipeline {
 
     environment{
             SOME = 'AA'
-            PASSWD = $DOCKER_HUB_PASSWD
+            PASSWD = credentials('DOCKER_HUB_PASSWD')
             
     }
 
