@@ -16,14 +16,13 @@ def main():
 
     #DanSQL().write("INSERT INTO some(data, more) VALUES(1234, 7895);")
     
-
-    gotit = requests.get('http://10.128.0.54:5050/').json()
+    if request.method == 'GET':
+        gotit = requests.get('http://10.128.0.54:5050/').json()
     
 
-    # if request.method == 'POST':
+    if request.method == 'POST':
 
-    #     data_received = request.data.decode('utf-8')      
-    #     return Response(data_received)
+        msg = 'POST READ'
 
     color = gotit['color']
     msg = gotit['sentence']
