@@ -8,7 +8,7 @@ class DanSQL():
 
     def __init__(self):
 
-        self.Make = pymysql.connect(host='34.121.192.21', user='root', passwd=login, db=dbname)
+        self.Make = pymysql.connect(host='34.121.192.21', user='root', passwd=login, db='master')
         self.MySQL = self.Make.cursor()
 
 
