@@ -13,10 +13,10 @@ def main():
     gotit = requests.get('http://10.128.0.54:5050/').json()
     
 
-    if request.method == 'POST':
+    # if request.method == 'POST':
 
-        data_received = request.data.decode('utf-8')      
-        return Response(data_received)
+    #     data_received = request.data.decode('utf-8')      
+    #     return Response(data_received)
 
     color = gotit['color']
     msg = gotit['sentence']

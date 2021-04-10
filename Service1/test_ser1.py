@@ -33,11 +33,11 @@ class TestViews(TestBase):  # This test confirms that the page loads
 
 # class TestResponse(TestBase):
 
-#     def test_one(self):
-#     # We will mock a response of 1 and test that we get football returned.
-#         with patch('requests.get') as g:
+    # def test_one(self):
+    # # We will mock a response of 1 and test that we get football returned.
+    #     with patch('requests.get') as g:
 
-#             response = self.client.get(url_for('main'))
-#             g.return_value.text = "abcaadcb"
+    #         g.return_value = 'dasdd'
+    #         response = self.client.get(url_for('main'))           
             
-#             self.assertIn(b'Dan', response.data)
+    #         self.assertIn(b'Dan', response.data)
