@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     environment{
-        DATABASE_URI = credentials('DATABASE_URI')
         DOCKER_HUB = credentials('DockerHub')
         GIT_HUB = credentials('GitHub')
     }
