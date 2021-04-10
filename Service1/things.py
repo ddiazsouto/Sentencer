@@ -6,9 +6,9 @@ login = getenv('DATABASE_CREDENTIALS')
 
 class DanSQL():
 
-    def __init__(self):
+    def __init__(self, dbname):
 
-        self.Make = pymysql.connect(host='34.121.192.21', user='root', passwd=login, db='master')
+        self.Make = pymysql.connect(host='34.121.192.21', user='root', passwd=login, db=dbname)
         self.MySQL = self.Make.cursor()
 
 
