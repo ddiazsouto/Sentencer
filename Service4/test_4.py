@@ -1,10 +1,11 @@
 
 from unittest.mock import patch
-from flask import url_for
+from flask import url_for, jsonify
 from flask_testing import TestCase
 import requests
 
-from app import app
+from app import app, middleend
+from blogic import BeLogic
 
 
 
@@ -32,12 +33,21 @@ class TestViews(TestBase):  # This test confirms that the page loads
 
 
 
-# class TestResponse(TestBase):
-#update
-#     def test_one(self):
-#     # We will mock a response of 1 and test that we get football returned.
-#         with patch('requests.get') as g:
-#             g.return_value.text = "Dan"
+class TestResponse(TestBase):
 
-#             response = self.client.get(url_for('middleend'))
-#             self.assertIn(b'Dan', response.data)
+    def test_one(self): 
+
+        with patch('blogic.BeLogic.color') as a:                #  We mock the function color, which is of random nature
+            value = '9a0000'                                         #     and we obtain the output of the page
+            a.return_value = value                                 #  it should return this output                                                                      
+            response = self.client.get(url_for('middleend')).data.decode('utf-8')[:-1]
+            self.assertIn('9a0000', response)
+
+
+    def test_two(self): 
+
+        with patch('blogic.BeLogic.talk') as a:             # We mock the talk function to check if it is
+
+            a.return_value = 'Just a simple test? It works!'       #  returned at the url
+            response = self.client.get(url_for('middleend'))
+            self.assertIn(b'Just a simple test? It works!', response.data)

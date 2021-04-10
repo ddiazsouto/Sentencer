@@ -4,6 +4,9 @@ from blogic import BeLogic
 app = Flask(__name__)
 
 
+
+
+
 @app.route('/', methods=['GET', 'POST'])
 def middleend():
 
