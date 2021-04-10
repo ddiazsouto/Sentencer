@@ -4,6 +4,11 @@
   - docker
 
 - hosts: nginx
-  become: no
+  become: yes
   roles:
   - getnginx
+
+- hosts: bosses
+  become: yes
+  roles:
+  - docker

@@ -1,19 +1,26 @@
 nginx:
   hosts:
     balancer:
+      ansible_user: jenkins
+      # ansible_ssh_private_key_file: "~/.ssh/id_rsa"
+      # ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
 
 bosses:
   hosts:
-    master:
     leader1:
+      ansible_user: jenkins
+      ansible_ssh_private_key_file: "~/.ssh/id_rsa"
+      ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
     
 employees:
   hosts:
-    worker:        
+    worker:
+      ansible_user: jenkins
+      ansible_ssh_private_key_file: "~/.ssh/id_rsa"
+      ansible_ssh_common_args: '-o StrictHostKeyChecking=no'     
     
-      # hosts:
-      #   ec2-3-9-191-132.eu-west-2.compute.amazonaws.com:
-      #   ec2-35-178-160-92.eu-west-2.compute.amazonaws.com:
-      # vars:
-      #   ansible_user: ubuntu
-      #   ansible_ssh_private_key_file: "~/.ssh/ansible_id_rsa"
+    
+    # vars:
+    #   ansible_user: jenkins
+    #   ansible_ssh_private_key_file: "~/.ssh/ansible_id_rsa"
+    #   ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
