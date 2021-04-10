@@ -3,6 +3,7 @@ pipeline {
 
     environment{
             SOME = 'AA'
+            PASSWD = $DOCKER_HUB_PASSWD
             
     }
 
