@@ -3,7 +3,6 @@ pipeline {
 
     environment{
             SOME = 'AA'
-            PASSWD = credentials('DOCKER_HUB_PASSWD')
             
     }
 
