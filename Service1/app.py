@@ -6,24 +6,33 @@ from os import getenv
 
 
 
+def injects(variable):
+        if request.method == 'POST':
+
+        DanSQL().write("CREATE TABLE IF NOT EXISTS some(Date TIMESTAMP DEFAULT now(), Sentence VARCHAR(100), id INT NOT NULL AUTO_INCREMENT PRIMARY KEY);")
+        DanSQL().write(f"INSERT INTO some(Sentence) values('{variable}');")
+
+
+
 @app.route('/', methods=['GET', 'POST'])
-def main():
+def main(msg):
 
     # host = getenv("HOSTNAME") 
    
     
-    if request.method == 'POST':
+    # if request.method == 'POST':
 
-        DanSQL().write("CREATE TABLE IF NOT EXISTS some(Date TIMESTAMP DEFAULT now(), Sentence VARCHAR(100), id INT NOT NULL AUTO_INCREMENT PRIMARY KEY);")
-        DanSQL().write(f"INSERT INTO some(Sentence) values('{msg}');")
+    #     DanSQL().write("CREATE TABLE IF NOT EXISTS some(Date TIMESTAMP DEFAULT now(), Sentence VARCHAR(100), id INT NOT NULL AUTO_INCREMENT PRIMARY KEY);")
+    #     DanSQL().write(f"INSERT INTO some(Sentence) values('{msg}');")
+
+    
 
      # if request.method == 'GET':
     gotit = requests.get('http://10.128.0.54:5050/').json()   
     color = gotit['color']
     msg = gotit['sentence']
-
-
-
+    
+    injects(msg)
 
 
     return render_template('main.html', title='Frontend', color=color, var=msg)
