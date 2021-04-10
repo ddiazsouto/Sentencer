@@ -6,7 +6,8 @@ app = Flask(__name__)
 def randomization():
 
     mood = azar([0, 1], 1)
-    return jsonify(expresser(mood))
+    output = expresser(mood)
+    return jsonify(output)
 
 if __name__ == '__main__':
     app.run(port=5005, host='0.0.0.0', debug=True)

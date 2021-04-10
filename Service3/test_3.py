@@ -3,6 +3,8 @@ from unittest.mock import patch
 from flask import url_for
 from flask_testing import TestCase
 
+from elementae import expresser, azar
+
 from app import app
 
 
@@ -30,4 +32,12 @@ class TestViews(TestBase):  # This test confirms that the page loads
         self.assertEqual(response.status_code, 200)
 
 
+# class TestResponse(TestBase):
 
+#     def test_one(self): 
+
+#         with patch('random.randint') as a:                #  We mock the function color, which is of random nature
+#             value = 1                                  
+#             a.return_value.data = 1                                 #  it should return this output                                                                      
+#             response = self.client.get(url_for('randomization'))
+#             self.assertIn(b'9a0000', response.data)

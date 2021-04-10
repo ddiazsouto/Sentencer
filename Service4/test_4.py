@@ -40,7 +40,8 @@ class TestResponse(TestBase):
         with patch('blogic.BeLogic.color') as a:                #  We mock the function color, which is of random nature
             value = '9a0000'                                         #     and we obtain the output of the page
             a.return_value = value                                 #  it should return this output                                                                      
-            response = self.client.get(url_for('middleend')).data.decode('utf-8')[:-1]
+            response = eval(self.client.get(url_for('middleend')).data.decode('utf-8')[:-1])
+            response = response['color']
             self.assertIn('9a0000', response)
 
 
