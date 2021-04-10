@@ -10,6 +10,8 @@ services:
         - target: 5500
           published: 5500        
           protocol: tcp
+        environment:
+          PASSWD: ${PASSWD}
     # depends_on:
     #     - "database"
 

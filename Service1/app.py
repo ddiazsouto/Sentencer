@@ -11,7 +11,7 @@ def main():
 
     # host = getenv("HOSTNAME")
 
-    logino = getenv('CREDENTIALS')
+    logino = getenv('PASSWD')
 
     # DanSQL().write("CREATE TABLE IF NOT EXISTS some(data int(10), more int(20));")
 

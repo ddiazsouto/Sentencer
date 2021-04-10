@@ -3,7 +3,7 @@ pipeline {
 
     environment{
             DATABASE_CREDENTIALS = credentials("CREDENTIALS")
-            DB_PASSWD = credentials("PASSWD")
+            PASSWD = credentials("PASSWD")
             
     }
 
