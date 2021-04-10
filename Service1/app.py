@@ -12,7 +12,7 @@ def main():
     # host = getenv("HOSTNAME") 
 
     msg = 'Click in New Message to Start the fun!!'
-    color = '000000'
+    color = '555555'
 
 
     if request.method == 'GET':
@@ -27,7 +27,7 @@ def main():
     if request.method == 'POST':
 
         DanSQL().write("CREATE TABLE IF NOT EXISTS some(Date TIMESTAMP DEFAULT now(), Sentence VARCHAR(100), id INT NOT NULL AUTO_INCREMENT PRIMARY KEY);")
-        DanSQL().write("INSERT INTO some(data, more) VALUES(000, 987);")
+        DanSQL().write(f"INSERT INTO some(Sentence) values('{msg}');")
 
 
 
