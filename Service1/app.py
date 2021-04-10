@@ -8,7 +8,7 @@ from os import getenv
 def main():
     template='main.html'
 
-    host = getenv("HOSTNAME")
+    # host = getenv("HOSTNAME")
     
 
     gotit = requests.get('http://10.128.0.54:5050/').json()
@@ -23,7 +23,7 @@ def main():
     msg = gotit['sentence']
     
 
-    return render_template(template, title='Frontend', color=color, var=msg, host = host)
+    return render_template(template, title='Frontend', color=color, var=msg)
 
 if __name__ == '__main__':
     app.run(port=5500, host='0.0.0.0', debug=True)
