@@ -1,14 +1,17 @@
+- hosts: bosses
+  become: yes
+  roles:
+  - docker
+  - bosses-tasks
+
 - hosts: employees
   become: yes
   roles:
   - docker
+  - employee-tasks
 
 - hosts: nginx
   become: yes
   roles:
   - getnginx
 
-- hosts: bosses
-  become: yes
-  roles:
-  - docker
