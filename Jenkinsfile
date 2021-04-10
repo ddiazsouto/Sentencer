@@ -27,9 +27,9 @@ pipeline {
 
         stage('Stage 2: Push'){
             steps{
-                // sh "docker login -u 'ddiazsouto' -p 'Buddhassister22' docker.io"   //   
-                sh "docker ps && docker images"         // Here we push to DockerHub or Nexus so in the Deployment phase we can pull from there
-                sh "docker-compose push "               // as it is best practice
+                
+                sh "docker ps && docker images"         // Here we push to DockerHub 
+                sh "docker-compose push "            
               
             }                                            
         }
