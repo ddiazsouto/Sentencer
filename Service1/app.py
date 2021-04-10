@@ -11,14 +11,11 @@ def main():
 
     # host = getenv("HOSTNAME") 
 
-    msg = 'Click in New Message to Start the fun!!'
-    color = '555555'
 
-
-    if request.method == 'GET':
-        gotit = requests.get('http://10.128.0.54:5050/').json()   
-        color = gotit['color']
-        msg = gotit['sentence']
+    # if request.method == 'GET':
+    gotit = requests.get('http://10.128.0.54:5050/').json()   
+    color = gotit['color']
+    msg = gotit['sentence']
 
 
 
