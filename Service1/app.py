@@ -1,13 +1,14 @@
 from flask import Flask, render_template, request, Response, jsonify, url_for
 app = Flask(__name__)
 import requests
-
-some={'dan':'Cool', 'Other': 'not so cool'}
+from os import getenv
 
 
 @app.route('/', methods=['GET', 'POST'])
 def main():
     template='main.html'
+
+    host = getenv("LOCALHOST")
     
 
     gotit = requests.get('http://10.128.0.54:5050/').json()
@@ -22,7 +23,7 @@ def main():
     msg = gotit['sentence']
     
 
-    return render_template(template, title='Frontend', color=color, var=msg)
+    return render_template(template, title='Frontend', color=color, var=msg, host = host)
 
 if __name__ == '__main__':
     app.run(port=5500, host='0.0.0.0', debug=True)
