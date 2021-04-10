@@ -5,6 +5,7 @@ import requests
 from os import getenv
 
 
+
 @app.route('/', methods=['GET', 'POST'])
 def main():
     template='main.html'
@@ -13,7 +14,7 @@ def main():
 
     # DanSQL().write("CREATE TABLE IF NOT EXISTS some(data int(10), more int(20));")
 
-    DanSQL().write("INSERT INTO some(data, more) VALUES(1234, 7895);")
+    #DanSQL().write("INSERT INTO some(data, more) VALUES(1234, 7895);")
     
 
     gotit = requests.get('http://10.128.0.54:5050/').json()
