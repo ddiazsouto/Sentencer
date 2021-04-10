@@ -8,7 +8,7 @@ from os import getenv
 def main():
     template='main.html'
 
-    host = getenv("LOCALHOST")
+    host = getenv("LOCAL_HOST")
     
 
     gotit = requests.get('http://10.128.0.54:5050/').json()
