@@ -26,7 +26,9 @@ def main():
     
     if request.method == 'POST':
 
-        msg = 'POST READ'
+         # DanSQL().write("CREATE TABLE IF NOT EXISTS some(data int(10), more int(20));")
+        DanSQL().write("INSERT INTO some(data, more) VALUES(333, 78095);")
+
 
 
     return render_template(template, title='Frontend', color=color, var=msg)
