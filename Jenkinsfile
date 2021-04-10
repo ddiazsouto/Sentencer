@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment{
-        DOCKER_HUB = credentials('DockerHub')
-        GIT_HUB = credentials('GitHub')
+            SOME = 'AA'
+            
     }
 
     stages{
