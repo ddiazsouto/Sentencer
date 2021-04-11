@@ -1,6 +1,6 @@
 nginx:
   hosts:
-    balancer:
+    balancer:              
       # ansible_user: jenkins
       # # ansible_ssh_private_key_file: "~/.ssh/id_rsa"
       # # ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
@@ -25,3 +25,30 @@ vars:
   ansible_user: jenkins
   ansible_ssh_private_key_file: "~/.ssh/ansible_id_rsa"
   ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+
+
+
+
+#                 SECOND CONFIGURATION  
+
+
+# nginx:
+#   hosts:
+#     34.89.89.204:               # For NGINX we use different zone so we define the external IP
+
+
+# bosses:
+#   hosts:
+#     leader1:
+
+    
+# employees:
+#   hosts:
+#     worker:
+#     balancer:         
+    
+    
+# vars:
+#   ansible_user: jenkins
+#   ansible_ssh_private_key_file: "~/.ssh/ansible_id_rsa"
+#   ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
