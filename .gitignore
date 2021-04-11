@@ -130,6 +130,4 @@ dmypy.json
 
 # Ignoring files that should only be in the cloud for documentation purposes
 
-Documentation/*
-!Documentation/README.md
-!Documentation/LICENSE
+*.png
