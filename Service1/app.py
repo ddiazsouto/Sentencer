@@ -28,6 +28,8 @@ def main():
     color = gotit['color']
     msg = gotit['sentence']
 
+    environmental.append(msg)
+
     
 
      # if request.method == 'GET':
