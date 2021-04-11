@@ -27,7 +27,7 @@ def main():
     gotit = requests.get('http://10.128.0.54:5050/').json()   
     color = gotit['color']
     msg = gotit['sentence']
-
+    environmental.pop()
     environmental.append(msg)
 
     
