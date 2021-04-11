@@ -48,7 +48,7 @@ nginx has served both as a reverse proxy and a load balancer<br>
 
 ## --Trello Board
 
-
+![My Trello Board](https://github.com/ddiazsouto/Sentencer/blob/main/Documentation/2Sprint%5Bsprint%20Backlog%5D.PNG?raw=true)
 
 ## --Database
 
