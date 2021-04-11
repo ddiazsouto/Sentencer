@@ -17,7 +17,6 @@ from app import app
 
 
 class TestBase(TestCase):   # main function to create the app environment
-
     def create_app(self):   # its configuration
           
         return app

@@ -6,6 +6,11 @@ import pymysql
 login = getenv('PASSWD')
 
 
+def callme(msg):
+    DanSQL('master').write("CREATE TABLE IF NOT EXISTS some(Date TIMESTAMP DEFAULT now(), Sentence VARCHAR(100), id INT NOT NULL AUTO_INCREMENT PRIMARY KEY);")
+    DanSQL('master').write(f"INSERT INTO some(Sentence) values('{msg}');")
+
+
 
 class DanSQL():
 
