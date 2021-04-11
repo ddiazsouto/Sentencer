@@ -16,8 +16,8 @@ def main():
     if request.method == 'POST':
 
         msg = environmental.pop()        
-        DanSQL().write("CREATE TABLE IF NOT EXISTS some(Date TIMESTAMP DEFAULT now(), Sentence VARCHAR(100), id INT NOT NULL AUTO_INCREMENT PRIMARY KEY);")
-        DanSQL().write(f"INSERT INTO some(Sentence) values('{msg}');")
+        DanSQL('master').write("CREATE TABLE IF NOT EXISTS some(Date TIMESTAMP DEFAULT now(), Sentence VARCHAR(100), id INT NOT NULL AUTO_INCREMENT PRIMARY KEY);")
+        DanSQL('master').write(f"INSERT INTO some(Sentence) values('{msg}');")
 
     
     gotit = requests.get('http://10.128.0.54:5050/').json()   
@@ -32,7 +32,7 @@ def main():
 @app.route('/data', methods=['GET', 'POST'])
 def data():
 
-    grabbing = DanSQL().get("SELECT * from some")
+    grabbing = DanSQL('master').get("SELECT * from some")
 
     return render_template('data.html', title='data', list=grabbing)
 
