@@ -31,10 +31,7 @@ def main():
 
 @app.route('/data', methods=['GET', 'POST'])
 def data():
-
-    grabbing = DanSQL('master').get("SELECT * from some")
-
-    return render_template('data.html', title='data', list=grabbing)
+    return render_template('data.html', title='data', list=DanSQL('master').get("SELECT * from some"))
 
 
 if __name__ == '__main__':

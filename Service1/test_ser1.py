@@ -2,7 +2,7 @@
 from unittest.mock import patch
 from flask import url_for
 from flask_testing import TestCase
-from things import DanSQL
+from things import DanSQL, callme
 
 from app import app
 
@@ -74,9 +74,6 @@ def test5():                            # Checks that the object can interact wi
 
 def test6():                            # Checks that the object can interact with the database using a string
     assert 'Dan' in MyAlchemy.creates("'Dan'")
-
-
-
 
 
 # class TestResponse(TestBase):
