@@ -34,6 +34,9 @@ class TestViews(TestBase):  # This test confirms that the page loads
         self.assertEqual(response.status_code, 200)
 
 
+
+
+
 # class TestResponse(TestBase):
 
     # def test_one(self):
