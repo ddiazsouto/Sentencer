@@ -32,9 +32,9 @@ def main():
 @app.route('/data', methods=['GET', 'POST'])
 def data():
 
-    dd = [1,2,3,4,5,6,7,8,9,0]
+    grabbing = DanSQL().get("SELECT * from some")
 
-    return render_template('data.html', title='data', list=dd)
+    return render_template('data.html', title='data', list=grabbing)
 
 
 if __name__ == '__main__':
