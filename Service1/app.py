@@ -27,15 +27,14 @@ def main():
     gotit = requests.get('http://10.128.0.54:5050/').json()   
     color = gotit['color']
     msg = gotit['sentence']
-    environmental.pop()
-    environmental.append(msg)
-
     
-
-     # if request.method == 'GET':
-
- 
+    environmental.append(msg)
+  
     return render_template('main.html', title='Frontend', color=color, var=msg)
+
+
+
+
 
 if __name__ == '__main__':
     app.run(port=5500, host='0.0.0.0', debug=True)
