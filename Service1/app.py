@@ -5,13 +5,18 @@ import requests
 from os import getenv
 
 
-
+environmental = []
 
 
 @app.route('/', methods=['GET', 'POST'])
 def main():
 
     # host = getenv("HOSTNAME") 
+
+    gotit = requests.get('http://10.128.0.54:5050/').json()   
+    color = gotit['color']
+    msg = gotit['sentence']
+    
    
     
     if request.method == 'POST':
@@ -22,10 +27,7 @@ def main():
     
 
      # if request.method == 'GET':
-    gotit = requests.get('http://10.128.0.54:5050/').json()   
-    color = gotit['color']
-    msg = gotit['sentence']
-    
+
  
     return render_template('main.html', title='Frontend', color=color, var=msg)
 
