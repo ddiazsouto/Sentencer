@@ -69,7 +69,7 @@ The DataBase has been a simple flat database that stores the sentences most like
 <br>
 
 
-## --Software Architeceture
+## --Software Architecture
 <br>
 Sentencer is a Microserviced aplication. Each container does one thing and it does it very well.
 <br><br><p>

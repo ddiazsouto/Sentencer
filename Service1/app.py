@@ -11,11 +11,7 @@ environmental = []
 @app.route('/', methods=['GET', 'POST'])
 def main():
 
-    # host = getenv("HOSTNAME") 
-
-
-    
-   
+    # host = getenv("HOSTNAME")   
     
     if request.method == 'POST':
 
@@ -33,7 +29,12 @@ def main():
     return render_template('main.html', title='Frontend', color=color, var=msg)
 
 
+@app.route('/data', methods=['GET', 'POST'])
+def data():
 
+    dd = [1,2,3,4,5,6,7,8,9,0]
+
+    return render_template('data.html', title='data', list=dd)
 
 
 if __name__ == '__main__':

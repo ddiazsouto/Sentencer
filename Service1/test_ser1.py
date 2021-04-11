@@ -29,6 +29,9 @@ class TestViews(TestBase):  # This test confirms that the page loads
         response = self.client.get(url_for('main'))
         self.assertEqual(response.status_code, 200)
 
+    def test_data_get(self):
+        response = self.client.get(url_for('data'))
+        self.assertEqual(response.status_code, 200)
 
 
 # class TestResponse(TestBase):
