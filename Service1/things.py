@@ -13,6 +13,7 @@ class DanSQL():
 
         self.Make = pymysql.connect(host='34.121.192.21', user='root', passwd=login, db=dabase)
         self.MySQL = self.Make.cursor()
+        self.db = dabase
 
 
     def sudo(self):
@@ -20,7 +21,7 @@ class DanSQL():
 
 
     def write(self, str):
-        init=DanSQL()
+        init=DanSQL(self.db)
 
         init.MySQL.execute(str)
         init.sudo()
@@ -29,7 +30,7 @@ class DanSQL():
 
     def get(self, str):
 
-        init=DanSQL()
+        init=DanSQL(self.db)
 
         init.MySQL.execute(str)
         out = init.MySQL.fetchall()
