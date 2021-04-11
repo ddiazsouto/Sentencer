@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Ignoring files that should only be in the cloud for documentation purposes
+
+Documentation/*
+!Documentation/README.md
+!Documentation/LICENSE
