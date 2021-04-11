@@ -26,11 +26,7 @@ def main():
     color = gotit['color']
     msg = gotit['sentence']
     
-    injects(msg)
-    # DanSQL().write("CREATE TABLE IF NOT EXISTS some(Date TIMESTAMP DEFAULT now(), Sentence VARCHAR(100), id INT NOT NULL AUTO_INCREMENT PRIMARY KEY);")
-    # DanSQL().write(f"INSERT INTO some(Sentence) values('{variable}');")
-
-
+ 
     return render_template('main.html', title='Frontend', color=color, var=msg)
 
 if __name__ == '__main__':
