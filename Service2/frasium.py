@@ -43,10 +43,13 @@ def phraser(list, question):
     output['verb1'] = verb1[list[1]]
     output['verb2'] = verb2[list[2]]
     output['preposition'] = preposition[list[3]]
+    if output['pronoun'] in ['He', 'She', 'It']:
+        output['verb1'] = output['verb1'] + 's'
 
     if question == True and output['pronoun'] in ['He', 'She', 'It']:
         output['aux'] = 'Does'
         output['pronoun'] = output['pronoun'].lower()
+        output['verb1'] = output['verb1'][:-1]
     elif question == True and output['pronoun'] not in ['He', 'She', 'It']:
         output['aux'] = 'Do'  
         if output['pronoun'] != 'I':
