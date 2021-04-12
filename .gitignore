@@ -130,5 +130,5 @@ dmypy.json
 
 # Ignoring files that should only be in the cloud for documentation purposes
 
-Documentation/*
+# Documentation/*
 
