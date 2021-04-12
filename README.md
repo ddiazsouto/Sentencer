@@ -25,7 +25,8 @@ The following modules have been using for testing:
 
 ## --Test Analysis
 <br><p>
-I have followed a TDD approach in building my aplication, which saved plenty of time in finding errors without having to manually load the app. Testing has been done in the following areas:
+
+#### I have followed a TDD approach in building my aplication, which saved plenty of time in finding errors without having to manually load the app. Testing has been done in the following areas:
 </p>
 
 #### <p>We started testing that the pages could load and thus we would get a return statement with a status of 200 from the get request.</p>
