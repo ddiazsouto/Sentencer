@@ -15,7 +15,7 @@ def randomizer():
 
     output = dict()
      
-    question = True                                     #binary()                              # This is boolean value, True or False
+    question = False                                     #binary()                              # This is boolean value, True or False
     check = phraser(azar([0, 7], 4), question)  
 
     output['dark'] = binary()

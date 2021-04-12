@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def randomization():
 
-    mood = azar([0, 1], 1)
+    mood = 0 #azar([0, 1], 1)
     output = expresser(mood)
     return jsonify(output)
 
