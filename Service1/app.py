@@ -14,9 +14,10 @@ def main():
     # host = getenv("HOSTNAME")   
     
     if request.method == 'POST':
-             
+         
+        msg = environmental.pop()      
         DanSQL('master').write("CREATE TABLE IF NOT EXISTS some(Date TIMESTAMP DEFAULT now(), Sentence VARCHAR(100), id INT NOT NULL AUTO_INCREMENT PRIMARY KEY);")
-        DanSQL('master').write(f"INSERT INTO some(Sentence) values('{environmental.pop()}');")
+        DanSQL('master').write(f"INSERT INTO some(Sentence) values('{msg}');")
 
     
     gotit = requests.get('http://10.128.0.54:5050/').json()   

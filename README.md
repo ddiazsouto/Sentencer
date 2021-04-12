@@ -27,10 +27,10 @@ The following modules have been using for testing:
 <br><p>
 I have followed a TDD approach in building my aplication, which saved plenty of time in finding errors without having to manually load the app. Testing has been done in the following areas:
 </p>
-#### <b>We started testing that the pages could load and thus we would get a return statement with a status of 200 from the get request.</b>
-#### <b>This covers Service 1 Service 2 Service 3 and Service 4</b>
+#### <p>We started testing that the pages could load and thus we would get a return statement with a status of 200 from the get request.</p>
+#### <p>Then more thorough testing was applied to logic of Service 4 achieving a 96% coverage</p>
 <br>
-This was very helpful particularly in the late stages as I could test the aplication before pushing it to GitHub and thus avoided waiting to see the problem through Jenkins.
+
 
 #### <br> <b>Service 4 Has used mock in the testing, this helps to check that the json is parsed propperly by the page and that is can be used propperly by the page logic.</b>
 <br>
