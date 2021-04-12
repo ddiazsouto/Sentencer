@@ -118,7 +118,7 @@ It follows this steps:</p>
 |The Microserviced app is not finished on time|	Issues when deploying at the end| Moderate |	Very High | me/project manager	| Show the finished bits |	Have a working pipeline and infrastructure early on so we can test as we deploy (CI)
 |There are problems in a local network i.e. US west|	GCP network system is down| Extremely low |	Very High | GCP	| Make sure load balancers are redirecting traffic to other regions |	Create part of the Swarm in different zones
 |Last changes in the source code make app unstable| Source code has changed	| Moderate |    Very High | Me and/or collaborators	| Git Revert to last stable release|	Make sure CVS has been used propperly during development
-| Current configuration is unstable |There was some manual change that affected how the swarm behaves| Relatively unlikely  | High | Mine |  Thanks to Ansible we can create a whole new swarm in very little time, matter of minutes. We can create a redundant configuration in a different zone  |  Another machine is running with Jenkins and Ansible installed 
+| Current configuration is unstable |There was some manual change that affected how the swarm behaves| Relatively unlikely  | High | Mine |  Thanks to Ansible we can create a whole new swarm in very little time, matter of minutes. We can create a redundant configuration in a different zone  |  Another machine is running with Jenkins and Ansible installed as well as docker and docker compose
 
 
 ## Acknowledgements and contributions
