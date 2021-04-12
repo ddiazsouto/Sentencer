@@ -27,16 +27,21 @@ The following modules have been using for testing:
 <br><p>
 I have followed a TDD approach in building my aplication, which saved plenty of time in finding errors without having to manually load the app. Testing has been done in the following areas:
 </p>
+
 #### <p>We started testing that the pages could load and thus we would get a return statement with a status of 200 from the get request.</p>
+
 #### <p>Then more thorough testing was applied to logic of Service 4 achieving a 96% coverage with 5 tests</p>
 <br>
-#### <p>Posteriorly, the logic on Services 2 and 3 was more thoroughly tested achieving a coverage of 97-98%
 
-
-#### <br> <b>Service 4 Has used mock in the testing, this helps to check that the json is parsed propperly by the page and that is can be used propperly by the page logic.</b>
+#### <p>Posteriorly, the logic on Services 2 and 3 was more thoroughly tested achieving a coverage of 97-98% with 5 tests</p>
 <br>
 
-We are missing more thorough testing mainly in the classes and functions that were created for the module
+
+####  <p>Service 4 Has used mock in the testing, this helps to check that the json is parsed propperly by the page and that is can be used propperly by the page logic. 3 tests achieved 94% coverage</p>
+<br>
+
+#### <p>At last, Service 1, as it has some more requirements like interaction with the database needed extra testing, 94% coverage was achieved with 5 tests </p>
+
 
 <br>
 
@@ -65,6 +70,7 @@ This is a link to my Trello Board:
 [MyTrello]: https://trello.com/b/bl57exOn/cloud
 
 <br>
+
 ## --Database
 The DataBase has been a simple flat database that stores the sentences most liked by the users, this can be used to improve the release of new features, implementation of more vocabulary, etc.
 <br>
