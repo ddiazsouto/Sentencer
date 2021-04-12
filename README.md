@@ -75,6 +75,9 @@ This is a link to my Trello Board:
 The DataBase has been a simple flat database that stores the sentences most liked by the users, this can be used to improve the release of new features, implementation of more vocabulary, etc.
 <br>
 
+## DI/CD Pipeline
+
+Update here
 
 ## --Software Architecture
 <br>
