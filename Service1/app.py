@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, Response, jsonify, url_for
-from things import DanSQL, callme
+from things import DanSQL
 app = Flask(__name__)
 import requests
 from os import getenv
@@ -14,10 +14,9 @@ def main():
     # host = getenv("HOSTNAME")   
     
     if request.method == 'POST':
-         
-        msg = environmental.pop()      
+             
         DanSQL('master').write("CREATE TABLE IF NOT EXISTS some(Date TIMESTAMP DEFAULT now(), Sentence VARCHAR(100), id INT NOT NULL AUTO_INCREMENT PRIMARY KEY);")
-        DanSQL('master').write(f"INSERT INTO some(Sentence) values('{msg}');")
+        DanSQL('master').write(f"INSERT INTO some(Sentence) values('{environmental.pop()}');")
 
     
     gotit = requests.get('http://10.128.0.54:5050/').json()   
