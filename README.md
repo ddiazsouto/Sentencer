@@ -28,8 +28,9 @@ The following modules have been using for testing:
 
 #### I have followed a TDD approach in building my aplication, which saved plenty of time in finding errors without having to manually load the app. Testing has been done in the following areas:
 </p>
+<br>
 
-#### <p>We started testing that the pages could load and thus we would get a return statement with a status of 200 from the get request.</p>
+#### <p>I started testing that the pages could load and thus we would get a return statement with a status of 200 from the get request.</p>
 
 #### <p>Then more thorough testing was applied to logic of Service 4 achieving a 96% coverage with 5 tests</p>
 <br>
