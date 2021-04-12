@@ -66,7 +66,8 @@ nginx has served both as a reverse proxy and a load balancer<br>
 <br>
 This is a link to my Trello Board:
 
-[Click me][MyTrello]!
+[Click me][MyTrello]
+
 [MyTrello]: https://trello.com/b/bl57exOn/cloud
 
 <br>
@@ -75,9 +76,6 @@ This is a link to my Trello Board:
 The DataBase has been a simple flat database that stores the sentences most liked by the users, this can be used to improve the release of new features, implementation of more vocabulary, etc.
 <br>
 
-## DI/CD Pipeline
-
-Update here
 
 ## --Software Architecture
 <br>
@@ -91,33 +89,23 @@ Container 4, grabs the information from container 2 and 3 and does some logic to
 <p>
 Container 1, being the frontend, displays a random sentence based in the parameters above and a background color which will change accordingly of the mood of the sentence.
 
-<br><p>The information flows between containers followin this flowchart:</p><br>
+<br><p>The information flows between containers following this flowchart:</p><br>
 
 ![Microservice Flowchart](https://raw.githubusercontent.com/ddiazsouto/Sentencer/main/Documentation/MSappC.jpg)
+
+## --CI/CD pipeline
+<br>
+The pipeline is automated with a Webhook from githum and integrated using a Jenkinsfile, from there we use docker commands, docker-compose for a unified configuration, docker swarm for deployment and Ansible for configuration management.<br>
+<p>
+It follows this steps:</p>
+
+![Microservice Flowchart](https://raw.githubusercontent.com/ddiazsouto/Sentencer/main/Documentation/JenkFlowChart.jpg)
+
 
 
 # Risk Analysis
 <hr>
 
-The readme must be exhaustive, the main structure will be written.
--Requirements
--Test analysis
--Technologies used
--Database
-
-This needs to be done
--Architecture
-
-## Issues
-
-I run into issues trying to put Jenkins in a container, it was solver by installing it in the machine
-
-The pipeline was given preference over the app, to align with Devops practices and improve CI
-
-
-Second step was to build the app, I can't seem to be able to use json requests
-
-Worked out the tests after a while
 
 
 
@@ -130,6 +118,7 @@ Worked out the tests after a while
 |The Microserviced app is not finished on time|	Issues when deploying at the end| Moderate |	Very High | me/project manager	| Show the finished bits |	Have a working pipeline and infrastructure early on so we can test as we deploy (CI)
 |There are problems in a local network i.e. US west|	GCP network system is down| Extremely low |	Very High | GCP	| Make sure load balancers are redirecting traffic to other regions |	Create part of the Swarm in different zones
 |Last changes in the source code make app unstable| Source code has changed	| Moderate |    Very High | Me and/or collaborators	| Git Revert to last stable release|	Make sure CVS has been used propperly during development
+| Current configuration is unstable |There was some manual change that affected how the swarm behaves| Relatively unlikely  | High | Mine |  Thanks to Ansible we can create a whole new swarm in very little time, matter of minutes. We can create a redundant configuration in a different zone  |  Another machine is running with Jenkins and Ansible installed 
 
 
 ## Acknowledgements and contributions
