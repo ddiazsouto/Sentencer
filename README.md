@@ -131,4 +131,4 @@ I aknowledge QA community as my main source of reference for the technologies an
 <p>A special mention must be made to all the colleagues of my cohort who have shown a truly Open Source mentality providing support at any time online to those who needed, and sharing their experience and knowledge for the community to benefit from it. </p>
 
 
-<br><br><br><i>Daniel Diaz Souto </i>
+<br><br><br><i>Daniel Diaz Souto. </i>
