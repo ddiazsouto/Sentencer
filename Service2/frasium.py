@@ -35,7 +35,7 @@ def phraser(list, question):
 
     verb2 = ['jumping', 'watching', 'running', 'skipping', 'pointing', 'smelling', \
     'becoming', 'remaining']
-
+    
     preposition = ['a', 'before', 'with', 'the', 'in', 'a', \
     'many', 'some']
 

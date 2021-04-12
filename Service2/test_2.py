@@ -2,7 +2,8 @@
 from unittest.mock import patch
 from flask import url_for
 from flask_testing import TestCase
-
+from frasium import phraser
+import pytest
 from app import app
 
 
@@ -29,6 +30,18 @@ class TestViews(TestBase):  # This test confirms that the page loads
         response = self.client.get(url_for('randomizer'))
         self.assertEqual(response.status_code, 200)
 
+
+def testing_first():    
+    assert str(phraser([1, 2, 3, 4], 1)) == "{'pronoun': 'you', 'verb1': 'stay', 'verb2': 'skipping', 'preposition': 'in', 'aux': 'Do'}"
+
+def testing_second():
+    assert str(phraser([2, 3, 4, 5], 1)) == "{'pronoun': 'he', 'verb1': 'get', 'verb2': 'pointing', 'preposition': 'a', 'aux': 'Does'}"
+
+def testing_third():
+    assert str(phraser([1, 2, 3, 4], 0)) == "{'pronoun': 'You', 'verb1': 'stay', 'verb2': 'skipping', 'preposition': 'in'}"
+
+def testing_fourth():
+    assert str(phraser([2, 3, 4, 5], 0)) == "{'pronoun': 'He', 'verb1': 'gets', 'verb2': 'pointing', 'preposition': 'a'}"
 
 
 # class TestResponse(TestBase):
