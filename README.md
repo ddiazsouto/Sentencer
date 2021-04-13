@@ -129,7 +129,11 @@ It follows this steps:</p>
 I aknowledge QA community as my main source of reference for the technologies and methodologies used. The same goes for Dara Oladapo and Harry Volker who provided the knowledge necessary to build this aplication
 <br><br>
 <p>A special mention must be made to all the colleagues of my cohort who have shown a truly Open Source mentality providing support at any time online to those who needed, and sharing their experience and knowledge for the community to benefit from it. </p>
-<p>Some code has been recycled from my previous project, [DataLake][previousproject] . Specifically, classes and functions to interact with the database and its testing, as well as some HTML parts like buttons and its CSS configuration.
+<p>Some code has been recycled from my previous project:
+
+[DataLake][previousproject] 
+
+Specifically, classes and functions to interact with the database and its testing, as well as some HTML parts like buttons and its CSS configuration.
   
 
 
